@@ -1,0 +1,31 @@
+.order-confirmation {
+  padding: 20px;
+  text-align: center;
+}
+
+.order-confirmation h1 {
+  font-size: 24px;
+  color: #5c4033; 
+}
+
+.order-confirmation p {
+  font-size: 16px;
+  color: #777;
+}
+
+.order-summary {
+  margin: 20px 0;
+  text-align: left;
+}
+
+.order-summary-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.order-summary-total {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: right;
+}
