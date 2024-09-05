@@ -1,11 +1,12 @@
-// App.js
 import React, { useState } from 'react';
 import ProductList from './Components/ProductList';
 import Cart from './Components/Cart';
-import OrderConfirmation from './Components/OrderConfirmtion.js';
+import OrderConfirmation from './Components/OrderConfirmtion.js'; // اصلاح نام فایل
+import OrderModal from './Components/OrderModal.js'; // ایمپورت کامپوننت مودال
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
+  const [isModalOpen, setIsModalOpen] = useState(false); // حالت برای کنترل نمایش مودال
 
   const addToCart = (product) => {
     setCartItems((prevItems) => {
@@ -26,14 +27,28 @@ function App() {
     );
   };
 
+  const handleConfirmOrder = () => {
+    setIsModalOpen(true); // باز کردن مودال
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false); // بستن مودال
+  };
+
   return (
     <div className="App">
       <ProductList addToCart={addToCart} />
-      <Cart cartItems={cartItems} removeFromCart={removeFromCart} />
-      {/* 
-        برای نمایش OrderConfirmation
-        می‌توانید از یک حالت (state) اضافه برای نمایش دادن یا ندادن این بخش استفاده کنید
-      */}
+<Cart 
+  cartItems={cartItems} 
+  removeFromCart={removeFromCart} 
+  onConfirmOrder={handleConfirmOrder} // اضافه کردن تابع به کامپوننت Cart
+/>
+      <OrderModal 
+        isOpen={isModalOpen} 
+        cartItems={cartItems} 
+        total={cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0)} 
+        onClose={handleCloseModal} 
+      />
     </div>
   );
 }

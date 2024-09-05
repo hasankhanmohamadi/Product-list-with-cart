@@ -1,5 +1,6 @@
 import React from 'react';
 import './ProductItemStyle.css';
+import cartIcon from 'icon-add-to-cart.svg.svg'
 
 function ProductItem({ product, addToCart }) {
   return (
@@ -16,9 +17,11 @@ function ProductItem({ product, addToCart }) {
         <h2>{product.name}</h2>
         <p>${product.price.toFixed(2)}</p>
       </div>
-
-      <button onClick={() => addToCart(product)}>Add to Cart</button>
-    </div>
+      <button onClick={() => addToCart(product)}>
+        <img src={cartIcon} alt="Cart Icon" className="cart-icon" /> 
+        Add to Cart
+      </button>
+        </div>
   );
 }
 

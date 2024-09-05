@@ -1,7 +1,17 @@
-  .product-list {
-    padding: 16px;
-  }
+.product-list {
+  display: grid; 
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+  gap: 20px; 
+  padding: 20px; 
+  max-width: 1200px; 
+  margin: 0 auto; 
+  font-family: 'RedHatText', sans-serif; 
+}
 
-  .product-list h1 {
-    margin-bottom: 16px;
-  }
+.product-list h1 {
+  font-size: 24px; 
+  color: #333; 
+  margin-bottom: 20px; 
+  text-align: left; 
+  font-weight: bold; 
+}
