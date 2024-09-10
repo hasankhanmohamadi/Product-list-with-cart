@@ -1,7 +1,7 @@
 import React from 'react';
-import './CartStyle.css'; // ایمپورت فایل CSS
+import './CartStyle.css'; 
 
-function Cart({ cartItems, removeFromCart, onConfirmOrder }) { // اضافه کردن onConfirmOrder به props
+function Cart({ cartItems, removeFromCart, onConfirmOrder }) { 
   const total = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
 
   return (
@@ -24,7 +24,7 @@ function Cart({ cartItems, removeFromCart, onConfirmOrder }) { // اضافه ک�
             ))}
           </ul>
           <h3>Total: ${total.toFixed(2)}</h3>
-          <button onClick={onConfirmOrder}>Confirm Order</button> {/* اضافه کردن تابع به دکمه */}
+          <button onClick={onConfirmOrder}>Confirm Order</button> {
         </>
       )}
     </div>

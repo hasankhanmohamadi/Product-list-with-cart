@@ -44,17 +44,27 @@
 }
 
 .product-item button {
-  margin-top: 10px; 
-  padding: 8px 16px; 
-  background-color: #d53f3f; 
-  color: white;
-  border: none;
-  border-radius: 5px;
+  font-family: 'RedHatText', sans-serif;
+  margin-top: 10px;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #b43737;
+  border-radius: 30px;
   cursor: pointer;
-  font-size: 14px;
-  transition: background-color 0.3s;
+  font-size: 12px;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+  padding: 6px;
 }
 
 .product-item button:hover {
   background-color: #b43737; 
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.cart-icon {
+  height: 18px; 
+  width: 18px; 
 }
