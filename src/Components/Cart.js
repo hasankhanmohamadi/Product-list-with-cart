@@ -24,7 +24,7 @@ function Cart({ cartItems, removeFromCart, onConfirmOrder }) {
             ))}
           </ul>
           <h3>Total: ${total.toFixed(2)}</h3>
-          <button onClick={onConfirmOrder}>Confirm Order</button> {
+          <button onClick={onConfirmOrder}>Confirm Order</button>
         </>
       )}
     </div>
